@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayoutPresentation.FlexWrapPage"
+             Title="FlexWrapPage"
+             NavigationPage.HasNavigationBar="True" 
+             NavigationPage.HasBackButton="True"
+             >
+    <Grid>
+        <ScrollView>
+            <FlexLayout x:Name="flexLayout"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceBetween">
+                
+                <Image Source="boop4.png"
+                       MaximumWidthRequest="200"
+                       MaximumHeightRequest="200"
+                       />
+                <Image Source="boop3.png"
+                       MaximumWidthRequest="200"
+                       MaximumHeightRequest="200"
+                       />
+                
+                <Button
+                    x:Name="PageLayoutClick"
+                    Text="We can also create a Page Layout with Flex!"
+                    SemanticProperties.Hint="Navigates to Page Layout."
+                    Clicked="PageLayoutClicked"
+                    HorizontalOptions="Center"
+                    MaximumHeightRequest="100"
+                    />
+                
+                <Image Source="boop1.png"
+                       MaximumWidthRequest="200"
+                       MaximumHeightRequest="200"/>
+                <Image Source="boop2.png"
+                       MaximumWidthRequest="200"
+                       MaximumHeightRequest="200"
+                       />
+            </FlexLayout>
+        </ScrollView>
+     
+    </Grid>
+</ContentPage>
